@@ -4,25 +4,46 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    static ArrayList<String> ListaNomes = new ArrayList<>();
     public static void main(String[] args) {
-        String nome = "Guedes";
-        String nome2 = "Bispo";
 
-        ArrayList<String> lista = new ArrayList<>();
+        ListaNomes.add("Guedes");
 
-        lista.add(nome);
-        lista.add(nome2);
+        Scanner scan = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("O Que você deseja Realizar?? \n 1-Listar Nomes \n 2-Adicionar Nome \n 3-Editar Nome \n 4-Excluir Nome \n");
+        String selecionado = scan.nextLine();
 
-        System.out.println("Digite seu nome:");
-        lista.add(sc.nextLine());
+        switch (selecionado) {
+            case "1":
+                selecionado = "1";
+                listar ();
+                break;
+            case "2":
+                selecionado ="2";
 
-        imprimir(lista);
+                break;
+            case "3":
+                selecionado = "3";
+
+                break;
+            case "4":
+                selecionado = "4";
+                Remover();
+                break;
+        }
     }
-    public static void imprimir(ArrayList<String> lista){
-        for (String nomeLista : lista){
-            System.out.printf(nomeLista +"\n");
+    public static void listar (){
+        for(String Nomes : ListaNomes){
+            System.out.println("Nomes Presentes:");
+            System.out.println(Nomes + "\n");
+        }
+    }
+    public static void Remover (){
+        int N = 0;
+        for (String Nomes : ListaNomes) {
+            System.out.println("Nomes Presentes:");
+            System.out.println(N+1 + "-" + Nomes + "\n");
         }
     }
 }
