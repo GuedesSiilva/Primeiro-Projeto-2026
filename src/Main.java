@@ -14,7 +14,13 @@ public class Main {
 
         menu: while(true) {
 
-            System.out.println("O Que você deseja Realizar?? \n 1-Listar Nomes \n 2-Adicionar Nome \n 3-Editar Nome \n 4-Excluir Nome \n 5-Sair");
+            System.out.println("""
+                    O Que você deseja Realizar??
+                    1-Listar Nomes
+                    2-Adicionar Nome
+                    3-Editar Nome  
+                    4-Excluir Nome  
+                    5-Sair""");
             String selecionado = scan.nextLine();
 
             switch (selecionado) {
